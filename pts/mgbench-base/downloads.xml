@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--Phoronix Test Suite v6.0.1-->
+<PhoronixTestSuite>
+  <Downloads>
+    <Package>
+      <URL>https://github.com/tbennun/mgbench/archive/v1.0.tar.gz</URL>
+      <!--MD5>07977be4b293986f2c695d626083969d</MD5-->
+      <FileName>mgbench-1.0.tar.gz</FileName>
+      <FileSize>176303</FileSize>
+    </Package>
+  </Downloads>
+</PhoronixTestSuite>

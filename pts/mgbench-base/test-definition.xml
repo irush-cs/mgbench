@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<PhoronixTestSuite>
+    <TestInformation>
+        <Title>Multi-GPU Computing Benchmark</Title>
+        <AppVersion>1.0</AppVersion>
+        <Description>GPU benchmarking (base test)</Description>
+        <ResultScale>GPUs</ResultScale>
+        <Proportion>HIB</Proportion>
+        <TimesToRun>1</TimesToRun>
+    </TestInformation>
+    <TestProfile>
+        <Version>1.0.0</Version>
+        <SupportedPlatforms>Linux</SupportedPlatforms>
+        <SoftwareType>Benchmark</SoftwareType>
+        <TestType>Other</TestType>
+        <License>Free</License>
+        <Status>Experimental</Status>
+        <ExternalDependencies>cuda</ExternalDependencies>
+        <ProjectURL>https://github.com/tbennun/mgbench</ProjectURL>
+        <InternalTags>CUDA</InternalTags>
+        <Maintainer>Tal Ben-Nun &amp; Yair Yarom</Maintainer>
+    </TestProfile>
+    <TestSettings>
+    </TestSettings>
+</PhoronixTestSuite>
