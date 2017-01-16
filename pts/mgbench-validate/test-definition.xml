@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<PhoronixTestSuite>
+    <TestInformation>
+        <Title>Multi-GPU Correctness Validation</Title>
+        <AppVersion>1.0</AppVersion>
+        <Description>GPU Correctness Validation</Description>
+        <ResultScale>GPU detection, Single GPU test, Multi-GPU No Communication, Multi-GPU With Communication</ResultScale>
+        <DisplayFormat>PASS_FAIL</DisplayFormat>
+        <TimesToRun>1</TimesToRun>
+    </TestInformation>
+    <TestProfile>
+        <Version>1.0.0</Version>
+        <SupportedPlatforms>Linux</SupportedPlatforms>
+        <SoftwareType>Utility</SoftwareType>
+        <TestType>System</TestType>
+        <License>Free</License>
+        <Status>Experimental</Status>
+        <Extends>local/mgbench-base</Extends>
+        <ExternalDependencies>cuda</ExternalDependencies>
+        <ProjectURL>https://github.com/tbennun/mgbench</ProjectURL>
+        <InternalTags>CUDA</InternalTags>
+        <Maintainer>Tal Ben-Nun &amp; Yair Yarom</Maintainer>
+    </TestProfile>
+    <!--TestSettings>
+        <Option>
+            <DisplayName>Validate</DisplayName>
+            <Identifier>validate</Identifier>
+            <Menu>
+                <Entry>
+                    <Name>GPU detection</Name>
+                    <Value>detect</Value>
+                </Entry>
+                <Entry>
+                    <Name>Single GPU test</Name>
+                    <Value>gputest</Value>
+                </Entry>
+            </Menu>
+        </Option>
+    </TestSettings-->
+</PhoronixTestSuite>
