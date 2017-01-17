@@ -24,3 +24,9 @@ validate:
 	@cat mgbench-validate/mgbench-validate.sh >> mgbench-validate/install.sh
 	@echo "EOF" >> mgbench-validate/install.sh
 	@echo "chmod +x mgbench-validate" >> mgbench-validate/install.sh
+
+install: install-suite
+install-suite:
+	@echo installing local/mgbench
+	@mkdir -p  ~/.phoronix-test-suite/test-suites/local/mgbench
+	@cp mgbench/suite-definition.xml ~/.phoronix-test-suite/test-suites/local/mgbench

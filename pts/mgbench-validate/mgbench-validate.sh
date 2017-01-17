@@ -26,9 +26,14 @@ for pid in $pids; do
 done
 [ $exists = 0 -a -n "$pids" ] && echo -n ,PASS >> $LOG_FILE || echo -n ,FAIL >> $LOG_FILE
 
-# basic validation for host to device
+# basic validation for host to device single
 msize=1024
 sgemm -n $msize -k $msize -m $msize --repetitions=100 --regression=true --startwith=$ngpu
+[ $? = 0 ] && echo -n ,PASS >> $LOG_FILE || echo -n ,FAIL >> $LOG_FILE
+
+# basic validation for host to device double
+msize=1024
+sgemm -n $msize -k $msize -m $msize --repetitions=100 --regression=true --startwith=$ngpu --double
 [ $? = 0 ] && echo -n ,PASS >> $LOG_FILE || echo -n ,FAIL >> $LOG_FILE
 
 # basic validation for device to device

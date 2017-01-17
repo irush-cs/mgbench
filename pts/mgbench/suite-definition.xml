@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--Phoronix Test Suite v3.0.0a3 (Iveland) [ http://www.phoronix-test-suite.com/ ]-->
+<PhoronixTestSuite>
+    <SuiteInformation>
+        <Title>Multi-GPU Computing Benchmark (full mgbench)</Title>
+        <Version>1.0</Version>
+        <TestType>Other</TestType>
+        <Description>Experimental</Description>
+        <Description>GPU benchmarking</Description>
+        <Maintainer>Tal Ben-Nun &amp; Yair Yarom</Maintainer>
+    </SuiteInformation>
+    <Execute>
+        <Test>local/mgbench-base</Test>
+        <Description>GPU count</Description>
+    </Execute>
+    <Execute>
+        <Test>local/mgbench-validate</Test>
+        <Description>Basic validation</Description>
+        <Mode>BATCH</Mode>
+    </Execute>
+</PhoronixTestSuite>
