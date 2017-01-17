@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!--Phoronix Test Suite v6.0.1-->
+<PhoronixTestSuite>
+  <ResultsParser>
+      <OutputTemplate>#_RESULT_#</OutputTemplate>
+      <ResultScale>MB/s</ResultScale>
+      <ResultProportion>HIB</ResultProportion>
+  </ResultsParser>
+</PhoronixTestSuite>

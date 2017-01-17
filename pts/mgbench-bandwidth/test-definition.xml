@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<PhoronixTestSuite>
+    <TestInformation>
+        <Title>Multi-GPU Memory Bandwidth Benchmark</Title>
+        <AppVersion>1.0</AppVersion>
+        <Description>GPU bandwidth</Description>
+        <ResultScale>MB/s</ResultScale>
+        <Proportion>HIB</Proportion>
+        <TimesToRun>1</TimesToRun>
+    </TestInformation>
+    <TestProfile>
+        <Version>1.0.0</Version>
+        <SupportedPlatforms>Linux</SupportedPlatforms>
+        <SoftwareType>Benchmark</SoftwareType>
+        <TestType>Other</TestType>
+        <License>Free</License>
+        <Status>Experimental</Status>
+        <Extends>local/mgbench-base</Extends>
+        <ExternalDependencies>cuda</ExternalDependencies>
+        <ProjectURL>https://github.com/tbennun/mgbench</ProjectURL>
+        <InternalTags>CUDA</InternalTags>
+        <Maintainer>Tal Ben-Nun &amp; Yair Yarom</Maintainer>
+    </TestProfile>
+    <TestSettings>
+        <Option>
+            <DisplayName>Duplex</DisplayName>
+            <Identifier>duplex</Identifier>
+            <Menu>
+                <Entry>
+                    <Name>Half</Name>
+                    <Value>halfduplex</Value>
+                </Entry>
+                <Entry>
+                    <Name>Full</Name>
+                    <Value>fullduplex</Value>
+                </Entry>
+            </Menu>
+        </Option>
+        <Option>
+            <DisplayName>Type</DisplayName>
+            <Identifier>type</Identifier>
+            <Menu>
+                <Entry>
+                    <Name>Host to Device</Name>
+                    <Value>h2d</Value>
+                </Entry>
+                <Entry>
+                    <Name>Device to Device</Name>
+                    <Value>d2d</Value>
+                </Entry>
+            </Menu>
+        </Option>
+        <Option>
+            <DisplayName>Optimum</DisplayName>
+            <Identifier>optimum</Identifier>
+            <Menu>
+                <Entry>
+                    <Name>Maximum</Name>
+                    <Value>max</Value>
+                </Entry>
+                <Entry>
+                    <Name>Minimum</Name>
+                    <Value>min</Value>
+                </Entry>
+            </Menu>
+        </Option>
+    </TestSettings>
+</PhoronixTestSuite>

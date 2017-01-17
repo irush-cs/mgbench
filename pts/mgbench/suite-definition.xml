@@ -18,4 +18,9 @@
         <Description>Basic validation</Description>
         <Mode>BATCH</Mode>
     </Execute>
+    <Execute>
+        <Test>local/mgbench-bandwidth</Test>
+        <Description>Bandwidth benchmarks</Description>
+        <Mode>BATCH</Mode>
+    </Execute>
 </PhoronixTestSuite>
