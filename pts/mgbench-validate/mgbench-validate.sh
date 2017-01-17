@@ -4,7 +4,7 @@ set -x
 exec 1>/tmp/aaa
 exec 2>&1
 
-PATH=$TEST_EXTENDS/mgbench-1.0/:${PATH}
+PATH=$TEST_EXTENDS/mgbench/:${PATH}
 printenv 
 
 # find some gpus
