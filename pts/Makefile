@@ -1,5 +1,6 @@
 
 default:
+	@echo
 	@echo use \"make install\" to install all profiles
 	@echo or copy them manually to "~/.phoronix-test-suite/test-{profiles,suites}/local"
 
@@ -46,3 +47,19 @@ bandwidth:
 	@cat mgbench-bandwidth/mgbench-bandwidth.pl >> mgbench-bandwidth/install.sh
 	@echo "EOF" >> mgbench-bandwidth/install.sh
 	@echo "chmod +x mgbench-bandwidth" >> mgbench-bandwidth/install.sh
+
+
+install: install-performance
+install-performance: performance
+	@echo installing local/mgbench-performance
+	@mkdir -p ~/.phoronix-test-suite/test-profiles/local/mgbench-performance
+	@cp mgbench-performance/{test-definition.xml,install.sh,results-definition.xml} ~/.phoronix-test-suite/test-profiles/local/mgbench-performance
+
+default: performance
+performance:
+	@echo building mgbench-performance/install.sh
+	@cp mgbench-performance/install.sh.template mgbench-performance/install.sh
+	@echo "cat > mgbench-performance <<'EOF'" >> mgbench-performance/install.sh
+	@cat mgbench-performance/mgbench-performance.sh >> mgbench-performance/install.sh
+	@echo "EOF" >> mgbench-performance/install.sh
+	@echo "chmod +x mgbench-performance" >> mgbench-performance/install.sh
