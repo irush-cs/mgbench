@@ -63,3 +63,19 @@ performance:
 	@cat mgbench-performance/mgbench-performance.sh >> mgbench-performance/install.sh
 	@echo "EOF" >> mgbench-performance/install.sh
 	@echo "chmod +x mgbench-performance" >> mgbench-performance/install.sh
+
+
+install: install-scaling
+install-scaling: scaling
+	@echo installing local/mgbench-scaling
+	@mkdir -p ~/.phoronix-test-suite/test-profiles/local/mgbench-scaling
+	@cp mgbench-scaling/{test-definition.xml,install.sh,results-definition.xml} ~/.phoronix-test-suite/test-profiles/local/mgbench-scaling
+
+default: scaling
+scaling:
+	@echo building mgbench-scaling/install.sh
+	@cp mgbench-scaling/install.sh.template mgbench-scaling/install.sh
+	@echo "cat > mgbench-scaling <<'EOF'" >> mgbench-scaling/install.sh
+	@cat mgbench-scaling/mgbench-scaling.sh >> mgbench-scaling/install.sh
+	@echo "EOF" >> mgbench-scaling/install.sh
+	@echo "chmod +x mgbench-scaling" >> mgbench-scaling/install.sh

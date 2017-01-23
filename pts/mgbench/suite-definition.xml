@@ -28,4 +28,9 @@
         <Description>Bandwidth benchmarks</Description>
         <Mode>BATCH</Mode>
     </Execute>
+    <Execute>
+        <Test>local/mgbench-scaling</Test>
+        <Description>Scaling performance</Description>
+        <Mode>BATCH</Mode>
+    </Execute>
 </PhoronixTestSuite>
